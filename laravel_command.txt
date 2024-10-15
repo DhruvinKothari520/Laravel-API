@@ -1,0 +1,23 @@
+--cretae a command
+composer global require laravel/installer
+ 
+-- create a laravel project 
+laravel new example-app
+
+-run project command
+php artisan serve
+
+---migration table file added
+php artisan make:migration create_students_table --create=students
+
+--- create db command
+php artisan migrate
+
+
+--create a controller
+php artisan make:controller StudentController --resource --model=Student
+
+
+---route add this code
+
+Route::resource('students','App\Http\Controllers\StudentController');
